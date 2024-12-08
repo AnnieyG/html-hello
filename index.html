@@ -1,64 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Pago</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section id="inicio">
-    <div class="contenedor">
-<header>
-<h1 class="titulo">Maravillas del Mundo</h1>
-</header>
-<main class="contenido">
-
-<div class="post">
-<header class="post-header">
-<h2>Macchu Picchu</h2>
-<span>15/11/2024</span>
-
-</header>
-<main class="post-body">
-<img src="./images/foto.jpg" alt="">
-</main>
-<footer class="post-footer">
-<p>El Santuario Histórico de Machupicchu​ es un área protegida del Perú de más de 35 mil hectáreas que comprende el entorno natural del sitio arqueológico de Machupicchu</p>
-</footer>
-</div>
-</main>
-    </div>
-
-    <div class="post">
-        <header class="post-header">
-        <h2>El Coliseo Romano</h2>
-        <span>16/11/2024</span>
-        
-        </header>
-        <main class="post-body">
-        <img src="./images/foto2.jpg" alt="">
-        </main>
-        <footer class="post-footer">
-        <p>El Coliseo se convirtió en el mayor anfiteatro romano, con una estructura elíptica de 188 metros de longitud, 156 metros de ancho y 57 metros de altura. Realizado en ladrillo y cubierto con travertino se dividía en cinco niveles con una capacidad para más de 50.000 personas.</p>
-        </footer>
+  <div class="form-container">
+    <h1>Payment form example</h1>
+    <div class="error-message">Some fields are missing</div>
+    <form>
+      <div class="form-group">
+        <label for="card-number">Card #</label>
+        <input type="text" id="card-number" placeholder="XXXXXXXXXXXXXXXX" required>
+      </div>
+      <div class="form-group">
+        <label for="cvc">CVC #</label>
+        <input type="text" id="cvc" placeholder="0000" required>
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="text" id="amount" placeholder="$ Amount" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" required>
         </div>
-    
-        <div class="post">
-            <header class="post-header">
-            <h2>La Gran Muralla China</h2>
-            <span>17/11/2024</span>
-            
-            </header>
-            <main class="post-body">
-            <img src="./images/foto3.jpg" alt="">
-            </main>
-            <footer class="post-footer">
-            <p>Construida entre el 770 y el 476 aC, la Gran Muralla China es una maravilla arquitectónica y el mayor proyecto de defensa militar del mundo antiguo. Mide 21.196,18 km y tiene una altura promedio de 7.8 metros. Cumple varias funciones como combate, comando, observación, comunicación y ocultación.</p>
-            </footer>
-            </div>
-        
-
-    </section>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" required>
+        </div>
+        <div class="form-group">
+          <label for="state">State</label>
+          <select id="state" required>
+            <option value="">Pick a state</option>
+            <option value="NY">New York</option>
+            <option value="CA">California</option>
+            <option value="TX">Texas</option>
+            <!-- Agrega más estados aquí -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="postal-code">Postal Code</label>
+          <input type="text" id="postal-code" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Add any notes here."></textarea>
+      </div>
+      <div class="form-group">
+        <label>We accept:</label>
+        <div class="payment-icons">
+          <!-- Puedes agregar imágenes de íconos aquí -->
+          <img src="visa.png" alt="Visa">
+          <img src="mastercard.png" alt="MasterCard">
+          <img src="paypal.png" alt="PayPal">
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="button" class="cancel-button">Cancel</button>
+        <button type="submit" class="submit-button">Send</button>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
